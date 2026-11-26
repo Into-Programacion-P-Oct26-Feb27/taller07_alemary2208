@@ -4,6 +4,8 @@
  */
 package problema03;
 
+import java.util.Locale;
+import java.util.Scanner;
 /**
  *
  * @author ASUS
@@ -15,6 +17,8 @@ public class Problema03 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
     }
     
 }
