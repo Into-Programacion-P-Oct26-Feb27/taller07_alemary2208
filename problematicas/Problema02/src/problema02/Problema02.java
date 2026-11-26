@@ -19,6 +19,35 @@ public class Problema02 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
+        
+        int limite;
+        int posicion = 1;
+        int resultado = 0;
+        int incremento = 2;
+        String reporte = "";
+
+        System.out.println("Ingrese el limite");
+        limite = entrada.nextInt();
+        
+        if (limite > 0 && limite <= 10){
+            System.out.println("Limite correcto");
+        }else {
+            System.out.println("Limite incorrecto");
+            limite = 10;
+        }
+        while (posicion <= limite) {
+            resultado = posicion * (posicion + 1);
+            
+            reporte = String.format("%s%d\tIncremento: %d\n", reporte, resultado, incremento);
+
+            
+            posicion = posicion + 1;
+            incremento = incremento + 2;
+        }
+
+        System.out.printf("%s", reporte);
+        
+        
     }
     
 }
