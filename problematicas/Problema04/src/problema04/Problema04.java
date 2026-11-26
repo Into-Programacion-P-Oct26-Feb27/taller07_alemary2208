@@ -25,26 +25,23 @@ public class Problema04 {
         int numerador = 1;
         int denominador = 1;
         String signo;
-        double suma = 0;
         String reporte = "";
 
         System.out.println("Ingrese el limite");
         limite = entrada.nextInt();
 
-        if (limite > 0 && limite <= 8) {
+        if (limite > 0) {
             System.out.println("Limite correcto");
         } else {
             System.out.println("Limite incorrecto");
-            limite = 8;
+            limite = 8; 
         }
 
         while (posicion <= limite) {
             if (posicion % 2 == 0) {
                 signo = "-";
-                suma = suma - ((double) numerador / denominador);
             } else {
                 signo = "+";
-                suma = suma + ((double) numerador / denominador);
             }
 
             if (posicion == 1) {
@@ -58,7 +55,7 @@ public class Problema04 {
         }
 
         System.out.printf("Serie: %s\n", reporte);
-        System.out.printf("Resultado de la serie: %.4f\n", suma);
+
     }
 }
     
